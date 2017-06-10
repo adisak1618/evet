@@ -1,0 +1,353 @@
+// Custom style for any page ty;e
+// Artist
+
+.single-page.artist {
+  .body {
+    margin-top: -180px;
+  }
+}
+
+.single-page.event {
+  .body {
+    margin-top: -230px;
+  }
+}
+
+
+
+
+.single-page {
+  overflow: hidden;
+  
+}
+@media (max-width: $screen-xs) {
+  // margin-top: $slideshow-margintop/3;
+  .single-page {
+    .header-page {
+      &:after {
+        background: none !important;
+        animation: none !important;
+      }
+    }
+    .body .section {
+      margin-top: 20px !important;
+    }
+    .header-page {
+      height: 400px !important;
+    }
+    .main-image {
+      margin: 0 30px !important;
+    }
+  }
+}
+@media (min-width: $screen-xs) and (max-width: $screen-sm - 1) {
+  .single-page {
+    .header-page {
+      &:after {
+        background: none !important;
+        animation: none !important;
+      }
+    }
+    .body .section {
+      margin-top: 20px !important;
+    }
+   
+  }
+}
+.sloping {
+  -webkit-transform: skewY(-2.2deg);
+  transform: skewY(-2.2deg);
+  -webkit-transform-origin: 0 0;
+  transform-origin: 0 0;
+}
+.bg-effect-green {
+  overflow: hidden;
+  background: #dce35b;
+  background: linear-gradient(135deg,#dce35b 20%,#45b649 80%);
+  // background-size: 800px 300px;
+  // background-image: url('./../img/icon-background.webp');
+  height: 300px;
+  -webkit-backface-visibility: hidden;
+  padding-bottom: 30px;
+  position: relative;
+  .image {
+    display: none;
+    img {
+      width: 100% !important;
+    }
+  }
+  .detail {
+    margin-top: 30px;
+    padding: 20px 0px;
+    transform: skewY(2.2deg);
+    h1.title {
+      color: $white-color;
+      text-shadow: 0px 4px 3px rgba(0,0,0,0.4),
+            0px 8px 13px rgba(0,0,0,0.1),
+            0px 18px 23px rgba(0,0,0,0.1);
+    }
+    .genres span, .date span {
+      -webkit-border-radius: 5px;
+      -moz-border-radius: 5px;
+      border-radius: 5px;
+      font-weight: bold;
+      color: $main-color;
+      background: $white-color;
+      font-weight: 400;
+      display: inline-block;
+      margin-bottom: 5px;
+      padding: 5px;
+      box-shadow: 0px 5px 21px -5px rgba(0,0,0,0.3);
+    }
+    .genres {
+      margin-bottom: 10px;
+    }
+  }
+  @keyframes animatedBackground {
+    from { background-position: 0 0; }
+    to { background-position: 0% 100%; }
+  }
+  @keyframes MOVEBG {
+    from {
+      transform:translateZ(0);
+    }
+    to { 
+      transform:translate3d(0, -320px, 0);
+    }
+  }
+  &:after {
+    background: url('./../img/icon-background.png') 0 0 repeat;
+    animation: animatedBackground 45s linear infinite;
+    opacity: 0.5;
+    background-size: 1000px;
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 400%;
+    width: 100%;
+    display: block;
+    z-index: 0;
+    content: "";
+    opacity: .05;
+  }
+}
+
+.radius {
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  box-shadow: 0px 5px 21px -5px rgba(0,0,0,0.3);
+}
+.single-page{
+  .header-page {
+    h1.title {
+      margin-top: 150px;
+      color: $white-color;
+      
+      text-shadow: 0px 4px 3px rgba(0,0,0,0.4),
+            0px 8px 13px rgba(0,0,0,0.1),
+            0px 18px 23px rgba(0,0,0,0.1);
+    }
+  }
+  .mobile-header {
+    margin-top: 200px !important;
+    h1.title {
+      color: $main-color !important;
+      text-shadow: none !important;
+    }
+  }
+  .body {
+    min-height: 500px;
+    padding-bottom: 30px;
+    .header {
+      .detail {
+        h1.title {
+          color: $white-color;
+          text-shadow: 0px 4px 3px rgba(0,0,0,0.4),
+                0px 8px 13px rgba(0,0,0,0.1),
+                0px 18px 23px rgba(0,0,0,0.1);
+        }
+        .genres span, .date span {
+          -webkit-border-radius: 5px;
+          -moz-border-radius: 5px;
+          border-radius: 5px;
+          font-weight: bold;
+          color: $main-color;
+          background: $white-color;
+          font-weight: 400;
+          display: inline-block;
+          padding: 5px;
+          margin-bottom: 10px;
+          box-shadow: 0px 5px 21px -5px rgba(0,0,0,0.3);
+        }
+        .genres {
+          margin-bottom: 10px;
+        }
+      }
+     
+      
+    }
+    .description {
+      position: relative;
+      margin-top: 60px;
+      padding: 20px;
+      background: $white-color;
+      border-top: 3px solid $main-color;
+      >div {
+        padding-bottom: 5px;
+      }
+      >.title {
+        position: absolute;
+        display: inline-block;
+        padding: 5px 20px;
+        background: $main-color;
+        color: $white-color;
+        height: 40px;
+        width: 100%;
+        text-align: center;
+        line-height: 30px;
+        font-weight: bold;
+        top: -40px;
+        left: 0px;
+         -webkit-border-top-left-radius: 5px;
+        -webkit-border-top-right-radius: 5px;
+        -moz-border-radius-topleft: 5px;
+        -moz-border-radius-topright: 5px;
+        border-top-left-radius: 5px;
+        border-top-right-radius: 5px;
+      }
+    }
+    .detail {
+      margin-top: 60px;
+    }
+    .section {
+      margin-top: 70px;
+      >.title {
+        display: inline-block;
+        padding: 5px 20px;
+        background: $main-color;
+        color: $white-color;
+        height: 40px;
+        line-height: 30px;
+        font-weight: bold;
+        top: -40px;
+        left: 0px;
+          -webkit-border-top-left-radius: 5px;
+        -webkit-border-top-right-radius: 5px;
+        -moz-border-radius-topleft: 5px;
+        -moz-border-radius-topright: 5px;
+        border-top-left-radius: 5px;
+        border-top-right-radius: 5px;
+      }
+      .content {
+        position: relative;
+        min-height: 200px;
+        padding: 0 20px;
+        background: $white-color;
+        border-top: 3px solid $main-color;
+        // >.title {
+        //   // position: absolute;
+        //   display: inline-block;
+        //   padding: 5px 20px;
+        //   background: $main-color;
+        //   color: $white-color;
+        //   height: 40px;
+        //   line-height: 30px;
+        //   font-weight: bold;
+        //   top: -40px;
+        //   left: 0px;
+        //    -webkit-border-top-left-radius: 5px;
+        //   -webkit-border-top-right-radius: 5px;
+        //   -moz-border-radius-topleft: 5px;
+        //   -moz-border-radius-topright: 5px;
+        //   border-top-left-radius: 5px;
+        //   border-top-right-radius: 5px;
+        // }
+        
+        >.title {
+          border-bottom: 2px solid $base-color;
+          font-size: 1.2em;
+          margin: 0 -10px;
+          padding: 10px;
+          // padding-bottom: 10px;
+          font-weight: bold;
+        }
+        .text {
+          padding: 10px 0;
+        }
+        .events {
+          margin: 0 -20px;
+          .item {
+            height: 60px;
+            border-top: 1px solid $base-color;
+            
+            .image {
+              display: block;
+              width: 60px;
+              overflow: hidden;
+              float: left;
+              height: 60px;
+              img {
+                width: 100%;
+              }
+            }
+            .state {
+              padding: 5px 0;
+              display: block;
+              float: left;
+              height: 60px;
+            }
+            .artist {
+              display: block;
+              // float: left;
+              color: $main-color;
+              padding: 0 20px;
+              line-height: 25px;
+              font-size: 1.2em;
+              height: 25px;
+            }
+            .date {
+              display: block;
+              // float: left;
+              color: $text-color;
+              padding: 0 20px;
+              line-height: 25px;
+              font-size: 1em;
+              height: 25px;
+            }
+            .view-more {
+              display: block;
+              float: right;
+              // line-height: 34px;
+              font-size: 0.8em;
+              font-weight: bold;
+              padding: 2px 5px;
+              margin: 16px 10px;
+              border: 2px solid $main-color;
+              -webkit-border-radius: 5px;
+              -moz-border-radius: 5px;
+              border-radius: 5px;
+            }
+            .view-more:hover {
+              background: $main-color;
+              color: $white-color;
+              cursor: pointer;
+            }
+          }
+        }
+        
+      }
+    }
+    
+  }
+  .main-image {
+    img {
+      width: 100%;
+      -webkit-border-radius: 5px;
+      -moz-border-radius: 5px;
+      border-radius: 5px;
+    }
+  }
+}
+

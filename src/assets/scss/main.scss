@@ -1,0 +1,35 @@
+@import './../../../bootstrap-sass-master/assets/stylesheets/_bootstrap.scss';
+@import './../../../font-awesome/scss/font-awesome.scss';
+@import 'variable';
+@import 'color';
+@import 'nav';
+@import 'section';
+
+
+// //custom
+@import 'slideshow';
+@import 'slide-card';
+@import 'card';
+@import 'pages/single-page';
+@import 'footer';
+body {
+  background: #fff;
+  font-size: 16px;
+  color: $main-color;
+}
+
+// Block
+// .block{
+//   display: inline-block;
+// }
+
+// .pull-right {
+//   float: right !important;
+// }
+
+
+
+.icon.large {
+  font-size: 3em;
+}
+

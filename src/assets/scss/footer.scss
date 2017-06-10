@@ -1,0 +1,27 @@
+.footer {
+  a {
+    color: $white-color;
+  }
+  a:hover {
+    text-decoration: none;
+  }
+  .social-media {
+    a {
+      padding: 10px;
+    }
+  }
+  li {
+    list-style-type: none;
+  }
+}
+
+@media (max-width: $screen-md) {
+  .footer {
+    padding-left: 10px !important;
+    padding-right: 10px !important;
+    li { 
+      display: inline-block;
+      padding-right: 15px;
+    }
+  }
+}

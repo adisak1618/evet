@@ -1,0 +1,69 @@
+section {
+  min-height: 300px;
+  margin: 0px;
+  h1,h2,h3,h4 {
+    font-weight: bold;
+  }
+}
+section.hilight{
+  overflow: hidden;
+  background: #dce35b;
+  background: linear-gradient(135deg,#dce35b 20%,#45b649 80%);
+  // background-size: 800px 300px;
+  // background-image: url('./../img/icon-background.webp');
+  // height: 400px;
+  padding-bottom: 30px;
+  padding-top: 30px;
+  position: relative;
+  > * {
+    position: relative;
+    z-index: 99;
+  }
+  @keyframes animatedBackground {
+    from { background-position: 0 0; }
+    to { background-position: 0% 100%; }
+  }
+  @keyframes MOVEBG {
+    from {
+      transform:translateZ(0);
+    }
+    to { 
+      transform:translate3d(0, -320px, 0);
+    }
+  }
+  &:after {
+    background: url('https://scotch.io/img/icon-background.png') 0 0 repeat;
+    animation: animatedBackground 45s linear infinite;
+    background-size: 1000px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 400%;
+    width: 100%;
+    display: block;
+    z-index: 0;
+    content: "";
+    opacity: .05;
+  }
+}
+
+
+
+
+
+
+
+
+
+section.secondary {
+  background: #f2f2f2;
+  padding: 0px 0px;
+}
+
+section.dark {
+  background: rgba(0,0,0,0.8);
+  color: #fff;
+  padding: 20px 0px;
+}
+
+

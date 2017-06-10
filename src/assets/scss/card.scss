@@ -1,0 +1,254 @@
+/* Generals resets and unimportant stuff */
+* { margin: 0px; padding: 0px; }
+body {
+	background: #eaebec;
+	font-family: "Open Sans", sans-serif; 
+}
+/* --- Product Card ---- */
+.card-container{
+  position: relative;
+  padding: 0 10px;
+  white-space: nowrap !important;
+  box-sizing: border-box;
+  overflow: auto !important;
+  overflow-y: hidden !important;
+  height: 450px;
+  transform-style: preserve-3d;
+  transition: transform 5s;
+  .scroller {
+    overflow: auto;
+		position: relative;
+    height: 500px !important;
+  }
+	>span{
+		cursor: pointer;
+		z-index: 999;
+		position: absolute;
+		top: 160px;
+		font: normal normal normal 14px/1 FontAwesome;
+		display: block;
+		background: $white-color;
+		box-shadow: 0 1px 1px 1px rgba(0, 0, 0, 0.14) !important;
+		width: 30px;
+		height: 30px;
+		text-align: center;
+		padding-top: 2px;
+		line-height: 30px;
+		font-size: 1.2em;
+		-webkit-border-radius: 50%;
+		-moz-border-radius: 50%;
+		border-radius: 50%;
+	}
+	>span.right-cursor {
+		right: 30px;
+		padding-left: 2px;
+		&:after {
+			content: "\f054";
+		}
+	}
+	>span.left-cursor {
+		left: 30px;
+		padding-right: 2px;
+		&:after {
+			content: "\f053";
+		}
+	}	
+}
+.card-container.artist {
+	height: 380px !important;
+}
+
+.card-container::-webkit-scrollbar {
+  display: none !important;
+}
+
+
+.card.artist .content {
+  height:350px;
+}
+
+.card:hover .content{
+	top:0px;
+	left:0px;
+	-webkit-transition: all 100ms ease-out; 
+       -moz-transition: all 100ms ease-out; 
+         -o-transition: all 100ms ease-out; 
+            transition: all 100ms ease-out; 
+}
+.card{
+	width:230px;
+	height:420px;
+	position:relative;
+  margin:5px; 
+	// top:10px;
+	// left:10px;	
+  display: inline-block !important;
+  vertical-align: top !important;
+  white-space: normal !important;
+	overflow:hidden;
+    transform-style: preserve-3d;
+	-webkit-transition:  100ms ease-out; 
+       -moz-transition:  100ms ease-out; 
+         -o-transition:  100ms ease-out; 
+            transition:  100ms ease-out;
+	.content{
+		width:235px;
+		height:420px;
+		background:#fff;
+		position:absolute;
+		left:-5px;
+		top:-5px;
+		-webkit-transition: all 100ms ease-out; 
+				-moz-transition: all 100ms ease-out; 
+					-o-transition: all 100ms ease-out; 
+							transition: all 100ms ease-out; 
+		img {
+			width: 100%;
+		}
+	}
+	.stats-container{
+		background:#fff;	
+		position:absolute;
+		top:325px;
+		left:0;
+		width:100%;
+		height:300px;
+		padding:17px 15px 15px;	
+		-webkit-transition: all 200ms ease-out; 
+				-moz-transition: all 200ms ease-out; 
+					-o-transition: all 200ms ease-out; 
+							transition: all 200ms ease-out;
+	}
+	.stats-container .product_name{
+		font-size:18px;
+		color:#393c45;
+		width: 150px;	
+	}
+	.stats-container p{
+		font-size:16px;
+		color:#b1b1b3;	
+		padding:2px 0 10px 0;
+		margin: 0px;
+	}
+	.stats-container .date{
+		// border: 1px solid #f56060;
+		background: $base-color;
+		padding: 5px;
+		float:right;
+		color: $text-color;
+		font-size:18px;
+		text-align: center;
+		font-weight:600;
+		-webkit-border-radius: 3px;
+		-moz-border-radius: 3px;
+		border-radius: 3px;
+		> span {
+			display: block;
+			border-top: solid 1px $text-color-secorndary;
+		}
+	}
+	.image_overlay{
+		position:absolute;
+		top:0;
+		left:0; 
+		width:100%;
+		height:100%;
+		background:$main-color;
+		opacity:0;	
+	}
+	.options{
+		padding:2px 0 0;
+	}
+	.options strong{
+		font-weight:700;
+		color:#393c45;
+		font-size:14px;
+	}
+	.options span{	
+		color:#969699;
+		font-size:14px;
+		display:block;
+		margin-bottom:8px;
+	}
+	.view_details{	
+		position:absolute;
+		top:112px;
+		left:50%;
+		margin-left:-85px;	
+		border:2px solid #fff;
+		color:#fff;
+		font-size:19px;
+		text-align:center;
+		text-transform:uppercase;
+		font-weight:700;
+		padding:10px 0;
+		width:172px;	
+		opacity:0;
+		-webkit-transition: all 200ms ease-out; 
+				-moz-transition: all 200ms ease-out; 
+					-o-transition: all 200ms ease-out; 
+							transition: all 200ms ease-out; 
+	}
+	.view_details:hover{	
+		background:#fff;
+		color:$main-color;
+		cursor:pointer;
+
+	}
+}
+.card.artist {
+  height:320px;
+}
+
+.card:hover{
+	// top:5px;
+	// left:5px;
+	width:230px;
+	height:420px;
+	box-shadow:0px 5px 21px -5px rgba(0, 0, 0, 0.3);
+	-webkit-transition:  100ms ease-out; 
+       -moz-transition:  100ms ease-out; 
+         -o-transition:  100ms ease-out; 
+            transition:  100ms ease-out; 
+}
+.card.artist:hover {
+  height:320px;
+}
+
+.card.artist .stats-container {
+  top: 225px;
+}
+.card:hover .stats-container{
+	top:255px;
+	-webkit-transition: all 200ms ease-out; 
+       -moz-transition: all 200ms ease-out; 
+         -o-transition: all 200ms ease-out; 
+            transition: all 200ms ease-out; 
+}
+.card.artist:hover .stats-container{
+  top:155px;
+}
+
+.card:hover .image_overlay{
+	opacity:0.7;	
+	-webkit-transition: all 200ms ease-out; 
+       -moz-transition: all 200ms ease-out; 
+         -o-transition: all 200ms ease-out; 
+            transition: all 200ms ease-out; 
+}
+
+.card:hover .view_details{
+	opacity:1;
+	width:152px;
+	font-size:15px;
+	margin-left:-75px;
+	top:25%;
+	-webkit-transition: all 200ms ease-out; 
+       -moz-transition: all 200ms ease-out; 
+         -o-transition: all 200ms ease-out; 
+            transition: all 200ms ease-out; 		
+}
+.card.artist:hover .view_details {
+  top: 60px;
+}
+
